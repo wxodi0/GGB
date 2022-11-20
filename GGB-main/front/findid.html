@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="findid.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+    <link rel="icon" href="../favicon/favicon.ico" type="favicon/x-icon">
+    <title>Find_ID</title>
+</head>
+<body>
+
+    <form action="/backend/findid.php" method="post">
+        <div class="find">
+            <h2>아이디찾기</h2>
+                <input type="text" placeholder="이름을 입력하세요" id="NAME" name="findname">
+                <input type="email" placeholder="이메일을 입력하세요" id="mail" name="findemail">
+                <button type="submit" name="sex" onclick="pushAll();">제출하기</button>
+        </div>
+    </form>
+
+    <script>
+        const pushAll= function(){
+            let userNewId = document.querySelector("#NAME");
+            let userNewEmail = document.querySelector("#mail");
+            
+            
+            if(userNewId.value==""){
+                alert("이름 을 입력해주세요.");
+                document.getElementsByName("findemail").focus();
+                
+            }
+            if(userNewEmail.value==""){
+                alert("email을 입력해주세요.");
+                document.getElementsByName("findemail").focus();
+            
+            }
+        }
+    </script>
+</body>
+</html>

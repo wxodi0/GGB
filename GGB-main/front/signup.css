@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Nanum Gothic Coding", monospace;
+}
+
+body {
+  background-color: rgb(190, 190, 190);
+}
+
+form {
+  background-color: rgb(194, 237, 255);
+  width: 450px;
+  height: 450px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 8px;
+}
+
+.Form {
+  margin: 0 auto;
+}
+
+input {
+  padding: 0px 3px;
+  display: block;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 35px;
+  margin: 0 auto;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.id {
+  margin-top: 15px;
+  padding: 0 5px;
+}
+
+.pw {
+  margin-top: 15px;
+  padding: 0 5px;
+}
+
+.email {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  padding: 0 5px;
+}
+
+#maker {
+  width: 200px;
+  height: 40px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+  border-color: #fff;
+}
+
+h2 {
+  text-align: center;
+  padding: 30px;
+  margin-top: 15px;
+}
+
+#maker:hover {
+  cursor: pointer;
+  width: 201px;
+  height: 42px;
+  border-color: rgb(93, 146, 252);
+}
+
+@media screen and (max-width: 1280px) {
+  form {
+      border-radius: 0px;
+      width: 100%;
+      height: 100%;
+  }
+  .Form {
+      position: relative;
+      top: 25%;
+  }
+  .id {
+      width: 70%;
+      height: 40px;
+  }
+  .pw {
+      width: 70%;
+      height: 40px;
+  }
+  .email {
+      width: 70%;
+      height: 40px;
+  }
+  #maker {
+      width: 30%;
+      height: 40px;
+  }
+  #maker:hover {
+      cursor: pointer;
+      width: 31%;
+      height: 41px;
+  }
+}

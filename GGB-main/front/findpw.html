@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="findpw.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+    <link rel="icon" href="../favicon/favicon.ico" type="favicon/x-icon">
+    <title>Find_pw</title>
+</head>
+<body>
+    <form action="/backend/findpw.php" method="post">
+        <h2>비밀번호 찾기</h2>
+        <input type="text" name="findname" placeholder="이름" id="NAME">
+        <input type="text" name="findid" placeholder="아아디" id="ID">
+        <input type="email" name="findemail" placeholder="이메일" id="email">
+        <button class="maker" id="maker" onclick="pushAll();">제출</button>
+    </form>
+
+    <script>
+        const pushAll= function(){
+            let userNewId = document.querySelector("#ID");
+            let userNewEmail = document.querySelector("#mail");
+            let userNewPw = document.querySelector("#NAME"); 
+            
+            if(userNewId.value==""){
+                alert("ID 를 입력해주세요.");
+                document.getElementsByName("findid").focus();
+                
+            }
+            if(userNewEmail.value==""){
+                alert("email을 입력해주세요.");
+                document.getElementsByName("findemail").focus();
+            
+            }
+            if(userNewPw.value == ""){
+                alert("이름을 입력해주세요.");
+                document.getElementsByName("findname").focus();
+            
+            }
+        }
+    </script>
+</body>
+</html>
